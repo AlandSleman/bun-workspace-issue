@@ -1,0 +1,35 @@
+logLevel = "debug" # "debug" | "warn" | "error"
+
+[install]
+
+# whether to install optionalDependencies
+optional = true
+
+# whether to install devDependencies
+dev = false
+
+# whether to install peerDependencies
+peer = true
+
+# equivalent to `--production` flag
+production = true
+
+# equivalent to `--frozen-lockfile` flag
+frozenLockfile = true
+
+# equivalent to `--dry-run` flag
+dryRun = false
+
+# equivalent to `--concurrent-scripts` flag
+concurrentScripts = 14 # (cpu count or GOMAXPROCS) x2
+
+[install.cache]
+# the directory to use for the cache
+dir = "~/.bun/install/cache"
+
+# when true, don't load from the global cache.
+# Bun may still write to node_modules/.cache
+disable = true
+
+# when true, always resolve the latest versions from the registry
+disableManifest = true
